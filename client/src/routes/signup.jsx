@@ -33,7 +33,7 @@ const Signup = () => {
             </h1>
             {displayError === false ? (
               <p className='mb-2 inline-flex w-full items-center rounded-sm border border-red-500 bg-red-50 py-2 px-4 font-rbtcondensed font-semibold text-red-500'>
-                <span class='mr-2 flex h-2 w-2 rounded-full bg-red-500' />
+                <span className='mr-2 flex h-2 w-2 rounded-full bg-red-500' />
                 Email is invalid
               </p>
             ) : (

@@ -13,6 +13,7 @@ const userRoute = require("./routes/user.route");
 
 /* CONFIGURATION */
 dotenv.config();
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 app.use(helmet());
@@ -20,7 +21,6 @@ app.use(helmet.crossOriginResourcePolicy({ policy: "cross-origin" }));
 app.use(morgan("common"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
 
 /* ROUTER */
 app.use("/api/auth", authRoute);
